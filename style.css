@@ -1,0 +1,13 @@
+.rowDiv {
+    display: flex;
+}
+
+.gridDiv {
+    width: 10px;
+    height: 10px;
+    flex: 1;
+
+    margin: 1px;
+
+    border: 1px solid black;
+}
