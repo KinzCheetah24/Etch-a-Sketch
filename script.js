@@ -17,5 +17,6 @@ for (let i = 0 ; i < columns ; i++) {
         let columnsDiv = document.createElement("div");
         columnsDiv.className = "gridDiv";
         rowsDiv.appendChild(columnsDiv);
+        columnsDiv.addEventListener("mousemove", () => {columnsDiv.style.backgroundColor = "blue"});
     }
 }
