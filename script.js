@@ -33,8 +33,24 @@ function createGrid(squaresPerSide) {
             let columnsDiv = document.createElement("div");
             columnsDiv.className = "gridDiv";
             rowsDiv.appendChild(columnsDiv);
-            columnsDiv.addEventListener("mousemove", () => {columnsDiv.style.backgroundColor = "blue"});
+            columnsDiv.addEventListener("mousemove", () => {
+                columnsDiv.style.backgroundColor = getRandomColor();
+                
+                let currentOpacity = parseFloat(columnsDiv.style.opacity) || 0;
+                console.log(currentOpacity);
+                if (columnsDiv.style.opacity < 1) {
+                    columnsDiv.style.opacity = currentOpacity + 0.1;
+                }
+            });
         }
         grid.appendChild(rowsDiv);
     }
+}
+
+function getRandomColor() {
+  const r = Math.floor(Math.random() * 256);     
+  const g = Math.floor(Math.random() * 256);    
+  const b = Math.floor(Math.random() * 256);
+  
+  return `rgb(${r}, ${g}, ${b})`;
 }
