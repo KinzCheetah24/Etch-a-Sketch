@@ -1,11 +1,23 @@
+button {
+    display: block;
+    margin: 50px auto;
+}
+
+.container {
+    width: 40vw;
+    height: 40vh;
+
+    margin: auto;
+}
+
 .rowDiv {
     display: flex;
 }
 
 .gridDiv {
-    width: 10px;
-    height: 10px;
     flex: 1;
+
+    aspect-ratio: 1;
 
     margin: 1px;
 
